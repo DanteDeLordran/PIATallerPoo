@@ -14,15 +14,19 @@ public class Operador {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY )
     @Column( unique = true, nullable = false ,name = "id" ,columnDefinition = "tinyint")
-    Integer id_opdr;
+    private Integer id_opdr;
 
     @Column( nullable = false, name = "nombre" , columnDefinition = "char(50)" )
-    String nom_opdr;
+    private String nom_opdr;
 
     public Operador(){}
 
     public Operador(String nom_opd){
         this.nom_opdr = nom_opd;
+    }
+
+    public Integer getId(){
+        return this.id_opdr;
     }
 
     public String getNombre(){
