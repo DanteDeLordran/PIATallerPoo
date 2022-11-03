@@ -13,10 +13,10 @@ public class Operador {
     
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY )
-    @Column( unique = true, nullable = false ,name = "id" ,columnDefinition = "tinyint")
+    @Column( unique = true, nullable = false ,name = "id_operador" )
     private Integer id_opdr;
 
-    @Column( nullable = false, name = "nombre" , columnDefinition = "char(50)" )
+    @Column( nullable = false, name = "nombre_operador" , columnDefinition = "char(50)" )
     private String nom_opdr;
 
     public Operador(){}

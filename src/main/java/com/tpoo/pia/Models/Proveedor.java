@@ -13,10 +13,10 @@ public class Proveedor {
     
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY )
-    @Column( name = "id", columnDefinition = "tinyint" )
+    @Column( name = "id_proveedor",unique = true, nullable = false )
     private Integer id_prov;
 
-    @Column( name = "nombre" ,columnDefinition = "char(50)")
+    @Column( name = "nombre_proveedor" ,columnDefinition = "char(50)")
     private String nom_prov;
 
     public Proveedor(){}
