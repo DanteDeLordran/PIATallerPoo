@@ -11,55 +11,56 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table( name = "registro" )
+@Table(name = "registro")
 public class Registro {
-    
+
     @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY )
-    @Column( name = "id_registro" ,unique = true, nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_registro", unique = true, nullable = false)
     private Integer id_rgtro;
 
-    @Column( name = "fecha" ,columnDefinition = "char(50)")
+    @Column(name = "fecha", columnDefinition = "char(50)")
     private String fecha_rgtro;
 
-    @Column( name = "remision" ,columnDefinition = "char(50)")
+    @Column(name = "remision", columnDefinition = "char(50)")
     private String rmsn_rgrto;
 
-    @Column( name = "nombre_cliente" ,columnDefinition = "char(50)")
+    @Column(name = "nombre_cliente", columnDefinition = "char(50)")
     private String nomcli_rgtro;
 
-    //FK Aqui con ID Operador
-    @ManyToOne( fetch = FetchType.LAZY )
-    @JoinColumn( name = "operador",referencedColumnName = "id_operador" )
+    // FK Aqui con ID Operador
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "operador", referencedColumnName = "id_operador")
     private Operador opdr_rgtro;
 
-    @Column( name = "sku" ,columnDefinition = "char(50)")
+    @Column(name = "sku", columnDefinition = "char(50)")
     private String sku_rgtro;
 
-    @Column( name = "lote" ,columnDefinition = "char(50)")
+    @Column(name = "lote", columnDefinition = "char(50)")
     private String lote_rgtro;
 
-    @Column( name = "cajas" ,columnDefinition = "char(50)")
+    @Column(name = "cajas", columnDefinition = "char(50)")
     private String cjs_rgtro;
 
-    @Column( name = "kilos" ,columnDefinition = "char(50)")
+    @Column(name = "kilos", columnDefinition = "char(50)")
     private String kilos_rgtro;
 
-    //FK aqui con ID Proveedor
-    @ManyToOne( fetch = FetchType.LAZY )
-    @JoinColumn( name = "proovedor",referencedColumnName = "id_proveedor" )
+    // FK aqui con ID Proveedor
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "proovedor", referencedColumnName = "id_proveedor")
     private Proveedor prov_rgtro;
 
-    @Column( name = "precio_unitario" ,columnDefinition = "char(50)")
+    @Column(name = "precio_unitario", columnDefinition = "char(50)")
     private String puni_rgtro;
 
-    @Column( name = "total_kilos" ,columnDefinition = "char(50)")
+    @Column(name = "total_kilos", columnDefinition = "char(50)")
     private String totkg_rgtro;
 
-    @Column( name = "monto_total" ,columnDefinition = "char(50)")
+    @Column(name = "monto_total", columnDefinition = "char(50)")
     private String mtotl_rgtro;
 
-    public Registro(){}
+    public Registro() {
+    }
 
     public Registro(Integer id_rgtro, String fecha_rgtro, String rmsn_rgrto, String nomcli_rgtro, Operador opdr_rgtro,
             String sku_rgtro, String lote_rgtro, String cjs_rgtro, String kilos_rgtro, Proveedor prov_rgtro,
@@ -76,6 +77,106 @@ public class Registro {
         this.prov_rgtro = prov_rgtro;
         this.puni_rgtro = puni_rgtro;
         this.totkg_rgtro = totkg_rgtro;
+        this.mtotl_rgtro = mtotl_rgtro;
+    }
+
+    public Integer getId_rgtro() {
+        return id_rgtro;
+    }
+
+    public String getFecha_rgtro() {
+        return fecha_rgtro;
+    }
+
+    public void setFecha_rgtro(String fecha_rgtro) {
+        this.fecha_rgtro = fecha_rgtro;
+    }
+
+    public String getRmsn_rgrto() {
+        return rmsn_rgrto;
+    }
+
+    public void setRmsn_rgrto(String rmsn_rgrto) {
+        this.rmsn_rgrto = rmsn_rgrto;
+    }
+
+    public String getNomcli_rgtro() {
+        return nomcli_rgtro;
+    }
+
+    public void setNomcli_rgtro(String nomcli_rgtro) {
+        this.nomcli_rgtro = nomcli_rgtro;
+    }
+
+    public Operador getOpdr_rgtro() {
+        return opdr_rgtro;
+    }
+
+    public void setOpdr_rgtro(Operador opdr_rgtro) {
+        this.opdr_rgtro = opdr_rgtro;
+    }
+
+    public String getSku_rgtro() {
+        return sku_rgtro;
+    }
+
+    public void setSku_rgtro(String sku_rgtro) {
+        this.sku_rgtro = sku_rgtro;
+    }
+
+    public String getLote_rgtro() {
+        return lote_rgtro;
+    }
+
+    public void setLote_rgtro(String lote_rgtro) {
+        this.lote_rgtro = lote_rgtro;
+    }
+
+    public String getCjs_rgtro() {
+        return cjs_rgtro;
+    }
+
+    public void setCjs_rgtro(String cjs_rgtro) {
+        this.cjs_rgtro = cjs_rgtro;
+    }
+
+    public String getKilos_rgtro() {
+        return kilos_rgtro;
+    }
+
+    public void setKilos_rgtro(String kilos_rgtro) {
+        this.kilos_rgtro = kilos_rgtro;
+    }
+
+    public Proveedor getProv_rgtro() {
+        return prov_rgtro;
+    }
+
+    public void setProv_rgtro(Proveedor prov_rgtro) {
+        this.prov_rgtro = prov_rgtro;
+    }
+
+    public String getPuni_rgtro() {
+        return puni_rgtro;
+    }
+
+    public void setPuni_rgtro(String puni_rgtro) {
+        this.puni_rgtro = puni_rgtro;
+    }
+
+    public String getTotkg_rgtro() {
+        return totkg_rgtro;
+    }
+
+    public void setTotkg_rgtro(String totkg_rgtro) {
+        this.totkg_rgtro = totkg_rgtro;
+    }
+
+    public String getMtotl_rgtro() {
+        return mtotl_rgtro;
+    }
+
+    public void setMtotl_rgtro(String mtotl_rgtro) {
         this.mtotl_rgtro = mtotl_rgtro;
     }
 
