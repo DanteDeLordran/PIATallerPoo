@@ -1,10 +1,14 @@
 package com.tpoo.pia.Models;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -18,6 +22,9 @@ public class Proveedor {
 
     @Column( name = "nombre_proveedor" ,columnDefinition = "char(50)")
     private String nom_prov;
+
+    @OneToMany( mappedBy = "proovedor" )
+    private Set<Registro> registro_prov = new HashSet<>();
 
     public Proveedor(){}
 

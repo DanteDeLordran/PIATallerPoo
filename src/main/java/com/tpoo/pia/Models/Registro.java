@@ -2,6 +2,7 @@ package com.tpoo.pia.Models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,7 +16,7 @@ public class Registro {
     
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY )
-    @Column( name = "id" ,unique = true, nullable = false)
+    @Column( name = "id_registro" ,unique = true, nullable = false)
     private Integer id_rgtro;
 
     @Column( name = "fecha" ,columnDefinition = "char(50)")
@@ -28,7 +29,7 @@ public class Registro {
     private String nomcli_rgtro;
 
     //FK Aqui con ID Operador
-    @ManyToOne
+    @ManyToOne( fetch = FetchType.LAZY )
     @JoinColumn( name = "operador",referencedColumnName = "id_operador" )
     private Operador opdr_rgtro;
 
@@ -45,7 +46,7 @@ public class Registro {
     private String kilos_rgtro;
 
     //FK aqui con ID Proveedor
-    @ManyToOne
+    @ManyToOne( fetch = FetchType.LAZY )
     @JoinColumn( name = "proovedor",referencedColumnName = "id_proveedor" )
     private Proveedor prov_rgtro;
 
