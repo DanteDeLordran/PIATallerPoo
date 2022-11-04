@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.tpoo.pia.Models.Registro;
 import com.tpoo.pia.Repositories.RegistroRepository;
 
+@Service
 public class RegistroService {
     
     @Autowired

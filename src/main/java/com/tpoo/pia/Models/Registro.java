@@ -2,12 +2,12 @@ package com.tpoo.pia.Models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+//import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+//import javax.persistence.JoinColumn;
+//import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -29,9 +29,9 @@ public class Registro {
     private String nomcli_rgtro;
 
     // FK Aqui con ID Operador
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "operador", referencedColumnName = "id_operador")
-    private Operador opdr_rgtro;
+    // @ManyToOne(fetch = FetchType.LAZY)
+    // @JoinColumn(name = "operador", referencedColumnName = "id_operador")
+    // private Operador opdr_rgtro;
 
     @Column(name = "sku", columnDefinition = "char(50)")
     private String sku_rgtro;
@@ -46,9 +46,9 @@ public class Registro {
     private String kilos_rgtro;
 
     // FK aqui con ID Proveedor
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "proovedor", referencedColumnName = "id_proveedor")
-    private Proveedor prov_rgtro;
+    // @ManyToOne(fetch = FetchType.LAZY)
+    // @JoinColumn(name = "proovedor", referencedColumnName = "id_proveedor")
+    // private Proveedor prov_rgtro;
 
     @Column(name = "precio_unitario", columnDefinition = "char(50)")
     private String puni_rgtro;
@@ -62,19 +62,19 @@ public class Registro {
     public Registro() {
     }
 
-    public Registro(Integer id_rgtro, String fecha_rgtro, String rmsn_rgrto, String nomcli_rgtro, Operador opdr_rgtro,
-            String sku_rgtro, String lote_rgtro, String cjs_rgtro, String kilos_rgtro, Proveedor prov_rgtro,
+    public Registro(Integer id_rgtro, String fecha_rgtro, String rmsn_rgrto, String nomcli_rgtro,
+            String sku_rgtro, String lote_rgtro, String cjs_rgtro, String kilos_rgtro,
             String puni_rgtro, String totkg_rgtro, String mtotl_rgtro) {
         this.id_rgtro = id_rgtro;
         this.fecha_rgtro = fecha_rgtro;
         this.rmsn_rgrto = rmsn_rgrto;
         this.nomcli_rgtro = nomcli_rgtro;
-        this.opdr_rgtro = opdr_rgtro;
+        //this.opdr_rgtro = opdr_rgtro;
         this.sku_rgtro = sku_rgtro;
         this.lote_rgtro = lote_rgtro;
         this.cjs_rgtro = cjs_rgtro;
         this.kilos_rgtro = kilos_rgtro;
-        this.prov_rgtro = prov_rgtro;
+        //this.prov_rgtro = prov_rgtro;
         this.puni_rgtro = puni_rgtro;
         this.totkg_rgtro = totkg_rgtro;
         this.mtotl_rgtro = mtotl_rgtro;
@@ -108,13 +108,13 @@ public class Registro {
         this.nomcli_rgtro = nomcli_rgtro;
     }
 
-    public Operador getOpdr_rgtro() {
-        return opdr_rgtro;
-    }
+    // public Operador getOpdr_rgtro() {
+    //     return opdr_rgtro;
+    // }
 
-    public void setOpdr_rgtro(Operador opdr_rgtro) {
-        this.opdr_rgtro = opdr_rgtro;
-    }
+    // public void setOpdr_rgtro(Operador opdr_rgtro) {
+    //     this.opdr_rgtro = opdr_rgtro;
+    // }
 
     public String getSku_rgtro() {
         return sku_rgtro;
@@ -148,13 +148,13 @@ public class Registro {
         this.kilos_rgtro = kilos_rgtro;
     }
 
-    public Proveedor getProv_rgtro() {
-        return prov_rgtro;
-    }
+    // public Proveedor getProv_rgtro() {
+    //     return prov_rgtro;
+    // }
 
-    public void setProv_rgtro(Proveedor prov_rgtro) {
-        this.prov_rgtro = prov_rgtro;
-    }
+    // public void setProv_rgtro(Proveedor prov_rgtro) {
+    //     this.prov_rgtro = prov_rgtro;
+    // }
 
     public String getPuni_rgtro() {
         return puni_rgtro;
