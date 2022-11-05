@@ -20,7 +20,7 @@ public class Proveedor {
     @Column( name = "id_proveedor",unique = true, nullable = false )
     private Integer id_prov;
 
-    @Column( name = "nombre_proveedor" ,columnDefinition = "char(50)",nullable = false)
+    @Column( name = "nombre_proveedor" ,columnDefinition = "char(50)", nullable = false)
     private String nom_prov;
 
     // @OneToMany( mappedBy = "proovedor" )

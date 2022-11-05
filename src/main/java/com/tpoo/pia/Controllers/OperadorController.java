@@ -24,6 +24,11 @@ public class OperadorController {
         return operadorService.obtenerOperadores();
     }
 
+    /*
+     * {
+     *      "nombre" : ""
+     * }
+     */
     //http://localhost:8080/api/operador
     @PostMapping( "/operador" )
     public Operador guardarOperador( @RequestBody Operador operador ){

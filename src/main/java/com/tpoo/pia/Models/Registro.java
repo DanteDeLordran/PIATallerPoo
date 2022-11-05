@@ -19,13 +19,13 @@ public class Registro {
     @Column(name = "id_registro", unique = true, nullable = false)
     private Integer id_rgtro;
 
-    @Column(name = "fecha", columnDefinition = "char(50)")
+    @Column(name = "fecha", columnDefinition = "char(50)" , nullable = false)
     private String fecha_rgtro;
 
-    @Column(name = "remision", columnDefinition = "char(50)")
+    @Column(name = "remision", columnDefinition = "char(50)", nullable = false)
     private String rmsn_rgrto;
 
-    @Column(name = "nombre_cliente", columnDefinition = "char(50)")
+    @Column(name = "nombre_cliente", columnDefinition = "char(50)", nullable = false)
     private String nomcli_rgtro;
 
     // FK Aqui con ID Operador
@@ -33,16 +33,16 @@ public class Registro {
     // @JoinColumn(name = "operador", referencedColumnName = "id_operador")
     // private Operador opdr_rgtro;
 
-    @Column(name = "sku", columnDefinition = "char(50)")
+    @Column(name = "sku", columnDefinition = "char(50)", nullable = false)
     private String sku_rgtro;
 
-    @Column(name = "lote", columnDefinition = "char(50)")
+    @Column(name = "lote", columnDefinition = "char(50)", nullable = false)
     private String lote_rgtro;
 
-    @Column(name = "cajas", columnDefinition = "char(50)")
+    @Column(name = "cajas", columnDefinition = "char(50)", nullable = false)
     private String cjs_rgtro;
 
-    @Column(name = "kilos", columnDefinition = "char(50)")
+    @Column(name = "kilos", columnDefinition = "char(50)", nullable = false)
     private String kilos_rgtro;
 
     // FK aqui con ID Proveedor
@@ -50,13 +50,13 @@ public class Registro {
     // @JoinColumn(name = "proovedor", referencedColumnName = "id_proveedor")
     // private Proveedor prov_rgtro;
 
-    @Column(name = "precio_unitario", columnDefinition = "char(50)")
+    @Column(name = "precio_unitario", columnDefinition = "char(50)", nullable = false)
     private String puni_rgtro;
 
-    @Column(name = "total_kilos", columnDefinition = "char(50)")
+    @Column(name = "total_kilos", columnDefinition = "char(50)", nullable = false)
     private String totkg_rgtro;
 
-    @Column(name = "monto_total", columnDefinition = "char(50)")
+    @Column(name = "monto_total", columnDefinition = "char(50)", nullable = false)
     private String mtotl_rgtro;
 
     public Registro() {

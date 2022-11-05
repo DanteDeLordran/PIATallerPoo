@@ -27,6 +27,12 @@ public class ProveedorController {
         return proveedorService.obtenerProveedores();
     }
 
+    /*
+     * {
+     *      "nombre" : ""
+     * }
+     */
+
     //http://localhost:8080/api/proveedor
     @PostMapping( "/proveedor" )
     public Proveedor guardarOperador( @RequestBody Proveedor proveedor ){
